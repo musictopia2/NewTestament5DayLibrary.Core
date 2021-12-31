@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.0.1</Version>
+	<Description>Library for getting the 5 day new testament reading for the year</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\NewTestament5DayReadingChapters.txt" />
+    <None Remove="Resources\NewTestament5DayReadingOrder.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Resources\NewTestament5DayReadingChapters.txt" />
+    <AdditionalFiles Include="Resources\NewTestament5DayReadingOrder.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonBasicLibraries" Version="5.0.6" />
+    <PackageReference Include="TxtToListGenerator" Version="1.0.2" />
+  </ItemGroup>
+
+  
+
+</Project>
