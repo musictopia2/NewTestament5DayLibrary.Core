@@ -20,7 +20,10 @@
 
   <ItemGroup>
     <PackageReference Include="CommonBasicLibraries" Version="5.0.6" />
-    <PackageReference Include="TxtToListGenerator" Version="1.0.2" />
+	  <!--
+	  unfortunately, if a source generator is being used, it always carries over unless i somehow remember to set privateassets to all.
+	  -->
+    <PackageReference Include="TxtToListGenerator" Version="1.0.2" PrivateAssets="all" />
   </ItemGroup>
 
   
