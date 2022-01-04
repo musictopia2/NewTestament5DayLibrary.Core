@@ -33,7 +33,7 @@ public class YearlyBibleReadingService
             throw new CustomBasicException("Books and chapters don't match");
         }
         //int year = _date.CurrentYear();
-        BasicList<DateOnly> dates = _date.GetReadingList(chapters.Sum(), year);
+        BasicList<DateOnly> dates = _date.GetReadingList(year, chapters.Sum());
         int x;
         BasicList<DailyReaderModel> readings = new();
         int z = 0;
