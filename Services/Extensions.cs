@@ -11,9 +11,9 @@ public static class Extensions
         return used.Year;
     }
     //eventually this can be in another library but not for a while.
-    internal static BasicList<DateOnly> GetReadingList(this IDateOnlyPicker date, int totalReadings)
+    internal static BasicList<DateOnly> GetReadingList(this IDateOnlyPicker date, int year, int totalReadings)
     {
-        int year = date.CurrentYear();
+        //int year = date.CurrentYear();
         //starting on first monday of the year seemed to make the most sense.
         DateOnly start = new(year, 1, 1);
         DateOnly ends = new(year, 12, 31);

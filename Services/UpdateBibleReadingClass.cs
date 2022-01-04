@@ -12,7 +12,7 @@ public class UpdateBibleReadingClass
     public async Task SaveNewReadingsAsync()
     {
         YearlyBibleReadingService service = new(_date);
-        var list = service.GetReadingSchedule();
+        var list = service.GetReadingSchedule(_date.CurrentYear(), true);
         await _storage.SaveDailyReadingSchedule(list);
     }
 }
